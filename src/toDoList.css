@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+body {
+    background-color: #242424;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.main-to-do-container {
+    width: max-content;
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 960px){
+    .main-to-do-container {
+        max-width: 960px;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.topContainerToDo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+.addTaskInput {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    border-radius: 5px;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.task-add-btn {
+    background-color: #41B06E;
+    font-size: 16px;
+}
+.task-add-btn:hover {
+    background-color: #328854;
+}
+.taskListItem {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    border: 1px solid rgba(126, 126, 126, 0.65);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    padding: 0 5px;
+}
+.taskListItem button {
+    margin-left: 3px;
+    font-size: 14px;
+}
+.taskListItem h3 {
+    flex: 1;
+    font-size: 17px;
+}
+.actionBtnContainer {
+    display: flex;
+    align-items: center;
+}
+
+.moveUpBtn {
+    position: relative;
+}
+.moveUpBtn::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-bottom: 15px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.moveDownBtn {
+    position: relative;
+}
+.moveDownBtn::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 15px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonicon {
+    padding: 6px 10px;
+}
+.buttonicon img {
+    width: 20px;
+}
+
+.deleteBtn {
+    background-color: red;
+}
+.deleteBtn:hover {
+    background-color: rgb(192, 0, 0);
+}
+
+.moveBtn {
+    background-color: rgb(0, 26, 255);
+}
+.moveBtn:hover {
+    background-color: rgb(0, 18, 182);
+}
+.cmpltdTask {
+    background-color: #874CCC;
+}
+.cmpltdTask:hover {
+    background-color: #623792;
+}
+
+.taskListContainer, .completedTaskListContainer {
+    margin-top: 50px;
+}
+
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 38px;
+    }
+    .topContainerToDo {
+        max-width: 100%;
+        display: flex;
+        padding: 5px;
+        margin: 0 auto;
+    }
+    .addTaskInput {
+        font-size: 13.5px;
+        flex: 1;
+        padding: 7px 10px;
+        min-width: 50px;
+    }
+    .task-add-btn {
+        font-size: 14px;
+    }
+    .taskListItem {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 4px;
+    }
+    .taskListItem h3 {
+        min-width: 100%;
+        font-size: 14px;
+    }
+    .buttonicon img {
+        width: 16px;
+    }
+    button {
+        padding: 6px 12px;
+    }
+    .moveUpBtn::after {
+        border-bottom-width: 12px;
+        border-left-width: 7.5px;
+        border-right-width: 7.5px;
+    }
+    .moveDownBtn::after {
+        border-top-width: 12px;
+        border-left-width: 7.5px;
+        border-right-width: 7.5px;
+    }
+}

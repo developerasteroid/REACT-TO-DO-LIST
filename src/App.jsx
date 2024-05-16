@@ -1,9 +1,10 @@
+import ToDoList from "./ToDoList"
 
 
 function App() {
 
   return (
-    <>To Do List</>
+    <ToDoList />
   )
 }
 
