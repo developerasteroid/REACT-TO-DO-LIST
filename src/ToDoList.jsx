@@ -92,7 +92,7 @@ export default function ToDoList(){
                                 <button 
                                 onClick={() => deleteTask(index)}
                                 className='deleteBtn buttonicon'
-                                ><img src="public/bin.png"/></button>
+                                ><img src="bin.png"/></button>
                                 <button 
                                 onClick={() => moveUpTask(index)}
                                 className='moveBtn moveUpBtn'
@@ -104,7 +104,7 @@ export default function ToDoList(){
                                 <button 
                                 onClick={() => addToCompletedTask(index)}
                                 className='cmpltdTask buttonicon'
-                                ><img src="public/check.png"/></button>
+                                ><img src="check.png"/></button>
                             </div>
                         </div>
                     ))}
@@ -118,7 +118,7 @@ export default function ToDoList(){
                             <button 
                             onClick={() => deleteCompletedTask(index)}
                             className='deleteBtn buttonicon'
-                            ><img src="src/assets/bin.png"/></button>
+                            ><img src="bin.png"/></button>
                             </div>
                         </div>
                     ))}
